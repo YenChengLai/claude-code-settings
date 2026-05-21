@@ -1,8 +1,8 @@
 # CLAUDE.md
 
-這個 repo 是個人的 Claude Code 環境設定。修改時請維持以下原則：
+This repo holds personal Claude Code environment settings. When editing, follow these conventions:
 
-- `.claude/settings.json` 為共用設定，會被 commit；`settings.local.json` 為本機設定，已加入 `.gitignore`。
-- 每個 skill 放在 `.claude/skills/<name>/SKILL.md`，必須有 frontmatter（`name`、`description`）。
-- Slash command 放在 `.claude/commands/<name>.md`，檔名 = 指令名。
-- Subagent 放在 `.claude/agents/<name>.md`，frontmatter 需設定 `name`、`description`，可加 `tools`、`model`。
+- `.claude/settings.json` is the shared, committed config; `settings.local.json` is local-only and listed in `.gitignore`.
+- Each skill lives at `.claude/skills/<name>/SKILL.md` and must include frontmatter with `name` and `description`.
+- Slash commands live at `.claude/commands/<name>.md`; the filename is the command name.
+- Subagents live at `.claude/agents/<name>.md`; frontmatter must set `name` and `description`, and may set `tools` and `model`.

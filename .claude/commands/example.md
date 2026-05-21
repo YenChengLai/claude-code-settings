@@ -1,10 +1,10 @@
 ---
-description: 範例 slash command（/example）。複製這個檔案重新命名以新增 command。
+description: Example slash command (/example). Copy this file and rename it to add a new command.
 ---
 
-這是 `/example` 指令的內容，會在使用者輸入 `/example` 時注入。
+This is the body of the `/example` command. It is injected into the conversation when the user types `/example`.
 
-可使用 `$ARGUMENTS` 接收使用者傳入的參數：
+You can use `$ARGUMENTS` to receive arguments passed by the user:
 
 ```
 /example foo bar  → $ARGUMENTS = "foo bar"

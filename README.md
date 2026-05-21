@@ -1,40 +1,40 @@
 # claude-code-settings
 
-個人 Claude Code 環境設定，包含 settings、skills、slash commands、subagents 等。
+Personal Claude Code environment settings, including settings, skills, slash commands, subagents, and more.
 
-## 結構
+## Structure
 
 ```
 .
-├── CLAUDE.md                 # 全域 / 專案備忘錄（Claude 每次會載入）
+├── CLAUDE.md                 # Project memory (Claude loads this every session)
 ├── .claude/
-│   ├── settings.json         # 共用設定（會 commit）
-│   ├── settings.local.json   # 本機設定（.gitignore，不 commit）
-│   ├── skills/               # 自訂 skills，每個 skill 一個資料夾
+│   ├── settings.json         # Shared settings (committed)
+│   ├── settings.local.json   # Local-only settings (gitignored)
+│   ├── skills/               # Custom skills, one folder per skill
 │   │   └── <skill>/SKILL.md
-│   ├── commands/             # 自訂 slash commands（/<name>）
+│   ├── commands/             # Custom slash commands (/<name>)
 │   │   └── <name>.md
-│   └── agents/               # 自訂 subagents
+│   └── agents/               # Custom subagents
 │       └── <name>.md
 └── README.md
 ```
 
-## 使用
+## Usage
 
-把這個 repo clone 到本機後，將 `.claude/` 內容套用到目標環境：
+After cloning this repo, apply the `.claude/` contents to your target environment:
 
-- 想全域生效：複製或 symlink 到 `~/.claude/`
-- 只想用在單一專案：複製或 symlink 到該專案的 `.claude/`
+- For user-level (global) use: copy or symlink into `~/.claude/`
+- For a single project: copy or symlink into that project's `.claude/`
 
 ```bash
-# 範例：symlink 到 user-level
+# Example: symlink into the user-level config
 ln -s "$(pwd)/.claude/skills"   ~/.claude/skills
 ln -s "$(pwd)/.claude/commands" ~/.claude/commands
 ln -s "$(pwd)/.claude/agents"   ~/.claude/agents
 ```
 
-## 新增內容
+## Adding new content
 
-- **Skill**：新增 `.claude/skills/<name>/SKILL.md`，內含 frontmatter（`name`、`description`）與 skill 內文。
-- **Slash command**：新增 `.claude/commands/<name>.md`，檔名即為指令名。
-- **Subagent**：新增 `.claude/agents/<name>.md`，內含 frontmatter 設定該 agent 的角色與工具。
+- **Skill**: create `.claude/skills/<name>/SKILL.md` with frontmatter (`name`, `description`) followed by the skill body.
+- **Slash command**: create `.claude/commands/<name>.md`; the filename becomes the command name.
+- **Subagent**: create `.claude/agents/<name>.md` with frontmatter defining the agent's role and tools.

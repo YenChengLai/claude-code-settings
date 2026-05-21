@@ -1,16 +1,16 @@
 ---
 name: example-skill
-description: 範例 skill。複製這個資料夾並改寫，可作為自訂 skill 的起點。
+description: Example skill. Copy this folder and rewrite it as a starting point for a custom skill.
 ---
 
 # example-skill
 
-這是一個 skill 模板。Skill 的內文會在被觸發時注入 Claude 的上下文。
+This is a skill template. The body is injected into Claude's context when the skill is triggered.
 
-## 何時使用
+## When to use
 
-說明什麼情境下這個 skill 應該被啟用，例如「使用者要求 X」或「檔案符合 Y 模式」。
+Describe the situations in which this skill should activate, e.g. "the user asks for X" or "a file matches pattern Y".
 
-## 行為
+## Behavior
 
-列出 Claude 在這個 skill 啟用後應該遵守的行為、步驟或檢查清單。
+List the behaviors, steps, or checklist that Claude should follow once this skill is active.
